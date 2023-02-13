@@ -4,18 +4,15 @@ const cors = require('cors')
 
 const app = express()
 
-const db = require("./app/modals")
-db.sequelize.sync({force: true}).then(()=>{
-    console.log("Drop and re-sync db");
-})
-
 var corsOptions = {
     origin: "http://localhost:8080"
 }
 
 app.use(cors(corsOptions))
 
-app.use(bodyParser.json())
+app.use(express.json())
+
+app.use(express.urlencoded({extented: true}))
 
 app.use(bodyParser.urlencoded({extented: true}))
 

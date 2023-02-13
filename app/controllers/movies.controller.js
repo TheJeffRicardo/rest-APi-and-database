@@ -1,6 +1,5 @@
 const db = require("../modals")
 const Movies = db.movies
-const Op = db.Sequelize.Op
 
 exports.create = (req, res) =>{
     if(!req.body.title) {
