@@ -1,4 +1,4 @@
-const sql = require("./db.js")
+const sql = require("./index.js")
 
 const Movies = function(tutorial) {
   this.title = tutorial.title
